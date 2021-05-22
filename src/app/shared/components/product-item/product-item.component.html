@@ -1,0 +1,16 @@
+<div class="product-item" (click)="viewDetail()">
+    <div class="card" >
+        <div class="image">
+            <img class="card-img-top" [src]="product.image" alt="Imagem do Produto">
+        </div>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <p class="card-text text-center">{{product.name}}</p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          <div class="price">
+            DZ {{product.price | number:'0.2-2'}}
+          </div>
+        </div>
+      </div>
+</div>
+

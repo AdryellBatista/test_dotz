@@ -1,0 +1,137 @@
+<div class="container profile">
+    <div class="row">
+        <div class="col-md-12 pt-3 title">
+             Perfil
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center pb-3">
+                    <img alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" [src]="userLoged?.avatar" style="width: 150px;">
+                </div>
+                <div class="card-body">
+                    <h3>Meus Dados:</h3>
+                    <form class="form" [formGroup]="objFormUser" autocomplete="off">
+
+                        <div class="input-group" [ngClass]="{ 'input-group-focus': focus3 === true }">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                <i class="tim-icons icon-single-02"> </i>
+                                </div>
+                            </div>
+                            <input
+                                class="form-control"
+                                placeholder="Nome"
+                                formControlName="name"
+                                type="text"
+                                (focus)="focus3 = true"
+                                (blur)="focus3 = false"
+                                autocomplete="off"
+                            />
+                        </div>
+                    
+                        <div class="input-group" [ngClass]="{ 'input-group-focus': focus1 === true }">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                <i class="tim-icons icon-email-85"> </i>
+                                </div>
+                            </div>
+                            <input
+                                class="form-control"
+                                placeholder="Email"
+                                formControlName="email"
+                                type="text"
+                                (focus)="focus1 = true"
+                                (blur)="focus1 = false"
+                                autocomplete="off"
+                            />
+                        </div>
+                        <div class="input-group" [ngClass]="{ 'input-group-focus': focus2 === true }">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                <i class="tim-icons icon-lock-circle"> </i>
+                                </div>
+                            </div>
+                            <input
+                                class="form-control"
+                                placeholder="Senha"
+                                formControlName="password"
+                                type="password"
+                                (focus)="focus2 = true"
+                                (blur)="focus2 = false"
+                                autocomplete="off"
+                            />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center pb-3">
+                    <i class="tim-icons icon-map-big"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Dados de Entrega:</h3>
+                    <form class="form" [formGroup]="objFormUser" autocomplete="off">
+
+                        <div class="input-group" [ngClass]="{ 'input-group-focus': focus4 === true }">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                <i class="tim-icons icon-map-big"> </i>
+                                </div>
+                            </div>
+                            <input
+                                class="form-control"
+                                placeholder="Endereço"
+                                formControlName="address"
+                                type="text"
+                                (focus)="focus4 = true"
+                                (blur)="focus4 = false"
+                                autocomplete="off"
+                            />
+                        </div>
+                    
+                        <div class="input-group" [ngClass]="{ 'input-group-focus': focus5 === true }">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                <i class="tim-icons icon-map-big"> </i>
+                                </div>
+                            </div>
+                            <input
+                                class="form-control"
+                                placeholder="Cidade"
+                                formControlName="city"
+                                type="text"
+                                (focus)="focus5 = true"
+                                (blur)="focus5 = false"
+                                autocomplete="off"
+                            />
+                        </div>
+                        <div class="input-group" [ngClass]="{ 'input-group-focus': focus6 === true }">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                <i class="tim-icons icon-map-big"> </i>
+                                </div>
+                            </div>
+                            <input
+                                class="form-control"
+                                placeholder="Estado"
+                                formControlName="state"
+                                type="text"
+                                (focus)="focus6 = true"
+                                (blur)="focus6 = false"
+                                autocomplete="off"
+                            />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 text-right">
+            <a class="btn btn-danger btn-round btn-lg" href="javascript:void(0)" (click)="editUser()">
+                Salvar
+            </a>
+        </div> 
+    </div>
+</div>

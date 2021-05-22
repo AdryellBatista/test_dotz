@@ -1,0 +1,10 @@
+<div class="container products-list">
+    <div class="row">
+        <div class="col-md-12 pt-3 title">
+             Produtos
+        </div>
+        <div *ngFor="let product of arProducts" class="col-md-3 col-sm-1 product-item">
+            <app-product-item [product]="product"></app-product-item>
+        </div>
+    </div>
+</div>

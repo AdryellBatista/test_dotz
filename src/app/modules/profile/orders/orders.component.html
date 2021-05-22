@@ -1,0 +1,33 @@
+<div class="container orders">
+    <div class="row">
+        <div class="col-md-12 pt-3 title">
+             Meus Pedidos
+        </div>
+        <div class="col-md-12" *ngFor="let order of arOrders">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-1 icon text-right">
+                        <i class="tim-icons icon-bag-16"></i>
+                    </div>
+                    <div class="col-md-5 pt-2 name">
+                        Pedido #{{order?.id}}
+                    </div>
+                    <div class="col-md-2 pt-2">
+                        {{order?.data  | date: 'dd/MM/yyyy   HH:mm'}}
+                    </div>
+                    <div class="col-md-2 price">
+                        DZ {{order?.price | number:'0.2-2'}}
+                    </div>
+                    <div class="col-md-2 pt-2 green">
+                        {{order?.status}}
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col-md-12 text-center pt-4" *ngIf="arOrders.length === 0">
+            Você ainda não possui nenhum pedido!
+        </div>
+    </div>
+</div>

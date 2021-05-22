@@ -1,0 +1,122 @@
+<div class="container products-detail">
+    <div class="row">
+        <div class="col-md-12 pt-3 title">
+            <div> <i class="tim-icons icon-double-left" (click)="goBack()"></i></div>
+             {{objProduct?.name}}
+             <p class="text-uppercase font-weight-bold">Cód. do produto: {{objProduct?.id}}</p>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card">
+                <img [src]="objProduct?.image" alt="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <span class="desc">Descrição</span> <br><br>
+            {{objProduct?.description}} <br><br>
+            <b>DZ {{objProduct?.price}}</b> <br><br>
+            <div class="but">
+                <button class="btn btn-danger mr-1" (click)="sale()"> Trocar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div
+      aria-hidden="true"
+      aria-labelledby="myModalLabel"
+      bsModal
+      class="modal fade modal-mini modal-danger modal-mini"
+      #myModal1="bs-modal"
+      id="myModal1"
+      role="dialog"
+      tabindex="-1"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header justify-content-center">
+            <button
+              aria-hidden="true"
+              class="close"
+              data-dismiss="modal"
+              (click)="myModal1.hide()"
+              type="button"
+            >
+              <i class="tim-icons icon-simple-remove text-white"> </i>
+            </button>
+            <div class="modal-profile">
+              <i class="tim-icons icon-bell-55"> </i>
+            </div>
+          </div>
+          <div class="modal-body">
+            <p>Você ainda não possuí DOTZ suficientes para essa troca! :(</p> <br>
+            <p> Seu saldo atual.: <strong>DZ {{userLoged.balance | number:'0.2-2'}}</strong></p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-link btn-neutral" type="button"></button>
+            <button
+              class="btn btn-link btn-neutral"
+              data-dismiss="modal"
+              type="button"
+              (click)="myModal1.hide()"
+            >
+              fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<div
+aria-hidden="true"
+aria-labelledby="myModalLabel"
+bsModal
+class="modal fade modal-mini modal-succescc modal-mini"
+#myModalSuccess="bs-modal"
+id="myModalSuccess"
+role="dialog"
+tabindex="-1"
+>
+<div class="modal-dialog modal-success">
+  <div class="modal-content">
+    <div class="modal-header justify-content-center">
+      <button
+        aria-hidden="true"
+        class="close"
+        data-dismiss="modal"
+        (click)="myModalSuccess.hide()"
+        type="button"
+      >
+        <i class="tim-icons icon-simple-remove text-white"> </i>
+      </button>
+      <div class="modal-profile">
+        <i class="tim-icons icon-check-2"> </i>
+      </div>
+    </div>
+    <div class="modal-body">
+      <p>Tem certeza que deseja trocar os seus pontos por {{objProduct?.name}}?</p> 
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-link btn-neutral" 
+       data-dismiss="modal"
+       type="button"
+       (click)="myModalSuccess.hide()"
+      type="button"> não</button>
+      <button
+        class="btn btn-link btn-neutral"
+        (click)="saleRegister()"
+      >
+        Sim
+      </button>
+    </div>
+  </div>
+</div>
+</div>

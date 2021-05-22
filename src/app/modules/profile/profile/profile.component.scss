@@ -1,0 +1,44 @@
+.profile{
+    .title {
+        font-weight: 700;
+        font-size: 38px;
+        color: #171941;
+    }
+
+    .card {
+        border-radius: 20px;
+
+        .card-header{
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: #d8dfec;
+
+            i {
+                font-size: 78px;
+                padding-top: 35px;
+                padding-bottom: 35px;
+            }
+        }
+
+        .card-body {
+            padding: 35px;
+        }
+    }
+
+    input {
+        color: #171941 !important;
+        border-color: #d8dfec;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .input-group-text {
+        border-color: #d8dfec;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    i, h3 {
+        color: orange;
+    }
+
+
+}

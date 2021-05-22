@@ -1,0 +1,46 @@
+.products-detail {
+    .title {
+        font-weight: 700;
+        font-size: 38px;
+        color: #171941;
+        i {
+            color: #f29433;
+            font-size: 15px;
+            cursor: pointer;
+            margin-bottom: -20px;
+
+        }
+        i:hover {
+            color: #171941;
+            font-size: 17px;
+        }
+        p {
+            color: #f29433;
+            font-size: 15px;
+        }
+    }
+
+    .desc {
+        color: #f29433;
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    b {
+        font-size: 25px;;
+    }
+
+    .btn {
+        border-radius: 30px;
+    }
+}
+
+    .modal-success {
+        .modal-content {
+            background: #00c347;
+
+            i {
+                color: #00c347;
+            }
+        }
+    }

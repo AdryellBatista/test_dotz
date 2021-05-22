@@ -1,0 +1,34 @@
+.orders{
+    .title {
+        font-weight: 700;
+        font-size: 38px;
+        color: #171941;    
+    }
+
+    .card {
+        padding: 15px;
+
+        .icon {
+            font-size: 20px;
+            color: #f29433;
+        }
+    }
+
+    .price {
+        font-size: 20px;
+        color: #f29433;
+        font-weight: 600;
+    }
+
+    .name {
+        font-weight: 600;
+    }
+
+    .green {
+        color: #00c347;
+    }
+
+    .card:hover {
+        background: #d8dfec;
+    }
+}
